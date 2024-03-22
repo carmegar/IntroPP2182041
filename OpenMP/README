@@ -1,0 +1,8 @@
+# IntroPP2182041
+
+This folder contains the following files:
+
+omp_postman.cpp: This file contains the implementation of the Postman Sort algorithm using OpenMP. 
+The algorithm sorts a large set of numbers based on their most significant digits, leveraging parallelism to enhance performance.
+
+postmansort.sbatch: SLURM script for executing the OpenMP code on GUANE-10, a high-performance computing cluster.
