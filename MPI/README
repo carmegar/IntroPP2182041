@@ -1,4 +1,4 @@
-**MPI Postman Sort**
+MPI Postman Sort
 
 Description:
 This program implements the Postman Sort algorithm using the Message Passing Interface (MPI) for parallelization. The Postman Sort algorithm sorts a large set of numbers based on their most significant digits. It divides the work among multiple processes to enhance performance on distributed systems.
@@ -36,3 +36,38 @@ The code is divided into the following sections:
 
 Output Explanation:
 The output of the program displays the execution time of the sorting process. This time indicates how long it took for the entire sorting process to complete. The time is displayed in seconds.
+
+C Binary Search
+
+Description:
+This program demonstrates the binary search algorithm in C. Binary search is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until the item is found or the subarray size becomes zero.
+
+Files:
+- `binary_search.c`: The main C file containing the implementation of the binary search algorithm.
+- `README.md`: This readme file explaining the code and its execution.
+
+Usage:
+To compile the code, use any C compiler:
+
+```
+gcc binary_search.c -o binary_search
+```
+
+To run the program:
+
+```
+./binary_search
+```
+
+Explanation:
+
+The code is divided into the following sections:
+
+1. Main Function: The main function initializes an array, sorts it using the Quick Sort algorithm, and then prompts the user to enter a value to search for. It measures the time taken for sorting and searching and displays the results.
+
+2. Quick Sort Function: The quickSort function sorts the array using the Quick Sort algorithm, which is an efficient divide-and-conquer sorting algorithm.
+
+3. Binary Search Function: The binarySearch function implements the binary search algorithm to search for a value in the sorted array. It repeatedly divides the search interval in half until the value is found or the interval becomes empty.
+
+Output Explanation:
+The output of the program displays the time taken for sorting the list and searching for the element in the sorted list. These times indicate how long it took for each operation to complete, measured in seconds.
