@@ -1,0 +1,38 @@
+**MPI Postman Sort**
+
+Description:
+This program implements the Postman Sort algorithm using the Message Passing Interface (MPI) for parallelization. The Postman Sort algorithm sorts a large set of numbers based on their most significant digits. It divides the work among multiple processes to enhance performance on distributed systems.
+
+Files:
+- `mpi_postman_sort.c`: The main C file containing the implementation of the MPI Postman Sort algorithm.
+- `README.md`: This readme file explaining the code and its execution.
+
+Usage:
+To compile the code, use an MPI compiler like `mpicc`:
+
+```
+mpicc mpi_postman_sort.c -o mpi_postman_sort
+```
+
+To run the program, use an MPI launcher like `mpirun`:
+
+```
+mpirun -np <number_of_processes> ./mpi_postman_sort
+```
+
+Explanation:
+
+The code is divided into the following sections:
+
+1. Initialization: The MPI environment is initialized, and the rank and size of each process are obtained.
+
+2. Data Generation and Distribution: Process 0 generates random numbers for the array and determines the number of digits of each number. The number of digits (`n`) is then broadcasted to all processes.
+
+3. Sorting Based on Most Significant Digit: Each process sorts a portion of the array based on the most significant digit. This sorting is done iteratively until all digits are considered.
+
+4. Output: Process 0 calculates and displays the execution time.
+
+5. Finalization: The MPI environment is finalized.
+
+Output Explanation:
+The output of the program displays the execution time of the sorting process. This time indicates how long it took for the entire sorting process to complete. The time is displayed in seconds.
